@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="hr.fer.zemris.java.tecaj_1">
+  <ClassDiagramComponents>
+    <Class name="GeometrijskiLik" package="hr.fer.zemris.java.tecaj_1" visibility="public" xPosition="366.0" yPosition="20.0">
+      <Fields>
+        <Field name="ime" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ime"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIme" returnType="String" visibility="public"/>
+        <Method name="getOpseg" returnType="double" visibility="public"/>
+        <Method name="getPovrsina" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Krug" package="hr.fer.zemris.java.tecaj_1" visibility="public" xPosition="165.0" yPosition="329.0">
+      <Fields>
+        <Field name="cx" type="int" visibility="private"/>
+        <Field name="cy" type="int" visibility="private"/>
+        <Field name="r" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ime"/>
+          <Argument type="int" name="cx"/>
+          <Argument type="int" name="cy"/>
+          <Argument type="int" name="r"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCx" returnType="int" visibility="public"/>
+        <Method name="getCy" returnType="int" visibility="public"/>
+        <Method name="getR" returnType="int" visibility="public"/>
+        <Method name="getOpseg" returnType="double" visibility="public"/>
+        <Method name="getPovrsina" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pravokutnik" package="hr.fer.zemris.java.tecaj_1" visibility="public" xPosition="505.0" yPosition="329.0">
+      <Fields>
+        <Field name="x" type="int" visibility="private"/>
+        <Field name="y" type="int" visibility="private"/>
+        <Field name="sirina" type="int" visibility="private"/>
+        <Field name="visina" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="ime"/>
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+          <Argument type="int" name="sirina"/>
+          <Argument type="int" name="visina"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getX" returnType="int" visibility="public"/>
+        <Method name="getY" returnType="int" visibility="public"/>
+        <Method name="getSirina" returnType="int" visibility="public"/>
+        <Method name="getVisina" returnType="int" visibility="public"/>
+        <Method name="getOpseg" returnType="double" visibility="public"/>
+        <Method name="getPovrsina" returnType="double" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Program1" package="hr.fer.zemris.java.tecaj_1.primjeri" visibility="public" xPosition="909.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Program2" package="hr.fer.zemris.java.tecaj_1.primjeri" visibility="public" xPosition="1148.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="hr.fer.zemris.java.tecaj_1.Krug" target="hr.fer.zemris.java.tecaj_1.GeometrijskiLik"/>
+    <IsRelation name="is" source="hr.fer.zemris.java.tecaj_1.Pravokutnik" target="hr.fer.zemris.java.tecaj_1.GeometrijskiLik"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

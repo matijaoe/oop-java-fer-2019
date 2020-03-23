@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.hr.fer.oop.generics.credit">
+  <ClassDiagramComponents>
+    <Class name="Bank" package="hr.fer.oop.generics.credit" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Client" package="hr.fer.oop.generics.credit" visibility="public" isAbstract="true" xPosition="1004.0" yPosition="84.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getCreditAbility" returnType="double" visibility="public" isAbstract="true">
+          <Argument type="int" name="rates"/>
+        </Method>
+        <Method name="getMaxAllowedRates" returnType="int" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="Credit" package="hr.fer.oop.generics.credit" visibility="public" xPosition="340.0" yPosition="600.0">
+      <Fields>
+        <Field name="owner" type="Client" visibility="private"/>
+        <Field name="interestRate" type="double" visibility="private"/>
+        <Field name="amount" type="double" visibility="private"/>
+        <Field name="rates" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Client" name="owner"/>
+          <Argument type="int" name="rates"/>
+          <Argument type="double" name="interestRate"/>
+          <Argument type="double" name="amount"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CreditOffering" package="hr.fer.oop.generics.credit" visibility="public" xPosition="309.0" yPosition="20.0">
+      <Fields>
+        <Field name="rates" type="int" visibility="protected"/>
+        <Field name="interestRate" type="double" visibility="protected"/>
+        <Field name="maximalAmount" type="double" visibility="protected"/>
+        <Field name="name" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="rates"/>
+          <Argument type="double" name="interestRate"/>
+          <Argument type="double" name="maximalAmount"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="issueCredit" returnType="Credit" visibility="public">
+          <Argument type="T" name="client"/>
+          <Argument type="double" name="amountRequested"/>
+        </Method>
+        <Method name="getRates" returnType="int" visibility="public"/>
+        <Method name="setRates" returnType="void" visibility="public">
+          <Argument type="int" name="rates"/>
+        </Method>
+        <Method name="getInterestRate" returnType="double" visibility="public"/>
+        <Method name="setInterestRate" returnType="void" visibility="public">
+          <Argument type="double" name="interestRate"/>
+        </Method>
+        <Method name="getMaximalAmount" returnType="double" visibility="public"/>
+        <Method name="setMaximalAmount" returnType="void" visibility="public">
+          <Argument type="double" name="maximalAmount"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NotSuitableException" package="hr.fer.oop.generics.credit" visibility="public" xPosition="1280.0" yPosition="11.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="Pensioner" package="hr.fer.oop.generics.credit" visibility="public" xPosition="1231.0" yPosition="549.0">
+      <Fields>
+        <Field name="monthlyPension" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="averageMonthlyPension"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCreditAbility" returnType="double" visibility="public">
+          <Argument type="int" name="rates"/>
+        </Method>
+        <Method name="getMaxAllowedRates" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Student" package="hr.fer.oop.generics.credit" visibility="public" xPosition="810.0" yPosition="585.0">
+      <Fields>
+        <Field name="motherSalary" type="double" visibility="private"/>
+        <Field name="fatherSalary" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="double" name="motherSalary"/>
+          <Argument type="double" name="fatherSalary"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCreditAbility" returnType="double" visibility="public">
+          <Argument type="int" name="rates"/>
+        </Method>
+        <Method name="getMaxAllowedRates" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="hr.fer.oop.generics.credit.Student" target="hr.fer.oop.generics.credit.Client"/>
+    <IsRelation name="is" source="hr.fer.oop.generics.credit.Pensioner" target="hr.fer.oop.generics.credit.Client"/>
+    <HasRelation name="owner" source="hr.fer.oop.generics.credit.Credit" target="hr.fer.oop.generics.credit.Client" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="hr.fer.oop.generics.credit.CreditOffering" target="hr.fer.oop.generics.credit.Credit" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

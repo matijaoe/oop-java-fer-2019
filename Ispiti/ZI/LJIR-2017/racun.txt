@@ -1,0 +1,4 @@
+naziv,jedinicnaCijena,kolicina,PDV
+Artikl_1,2,10,0.25
+Artikl_2,10,4,0.25
+Artikl_3,6,1,0.05

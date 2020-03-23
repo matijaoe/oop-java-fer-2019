@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Maven: commons-beanutils:commons-beanutils:1.9.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/commons-validator-1.6-bin.zip!/commons-validator-1.6/apidocs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
